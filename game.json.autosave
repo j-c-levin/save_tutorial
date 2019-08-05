@@ -286,7 +286,12 @@
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "ID",
+              "value": "1"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -1072,12 +1077,17 @@
           "locked": false,
           "name": "coin",
           "width": 0,
-          "x": 710,
+          "x": 732,
           "y": 482,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "ID",
+              "value": "2"
+            }
+          ]
         },
         {
           "angle": 0,
@@ -1125,7 +1135,7 @@
           "initialVariables": []
         },
         {
-          "angle": 90.7084,
+          "angle": 270,
           "customSize": true,
           "height": 32,
           "layer": "",
