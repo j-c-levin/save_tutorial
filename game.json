@@ -745,21 +745,6 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Player movement",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -805,41 +790,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Delete"
-              },
-              "parameters": [
-                "coin",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "score",
-                "+",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "EcrireFichierExp"
-              },
-              "parameters": [
-                "\"game\"",
-                "\"score\"",
-                "GlobalVariable(score)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "EcrireFichierTxt"
               },
               "parameters": [
@@ -850,7 +800,17 @@
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "collect_coin"
+            }
+          ]
         },
         {
           "disabled": false,
@@ -891,24 +851,24 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"level_2\"",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "EcrireFichierTxt"
               },
               "parameters": [
                 "\"game\"",
                 "\"level\"",
                 "\"level_2\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"level_2\"",
+                ""
               ],
               "subInstructions": []
             }
@@ -1496,21 +1456,6 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Player movement",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -1556,41 +1501,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Delete"
-              },
-              "parameters": [
-                "coin",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "score",
-                "+",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "EcrireFichierExp"
-              },
-              "parameters": [
-                "\"game\"",
-                "\"score\"",
-                "GlobalVariable(score)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "EcrireFichierTxt"
               },
               "parameters": [
@@ -1601,7 +1511,17 @@
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "collect_coin"
+            }
+          ]
         },
         {
           "disabled": false,
@@ -1642,24 +1562,24 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"level_1\"",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "EcrireFichierTxt"
               },
               "parameters": [
                 "\"game\"",
                 "\"level\"",
                 "\"level_1\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"level_1\"",
+                ""
               ],
               "subInstructions": []
             }
@@ -2703,6 +2623,57 @@
               "events": []
             }
           ]
+        }
+      ]
+    },
+    {
+      "associatedLayout": "level_1",
+      "lastChangeTimeStamp": 0,
+      "name": "collect_coin",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "coin",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "score",
+                "+",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "EcrireFichierExp"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"score\"",
+                "GlobalVariable(score)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ]
     }
