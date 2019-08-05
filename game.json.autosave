@@ -223,7 +223,7 @@
       "title": "",
       "v": 250,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridB": 255,
         "gridG": 180,
         "gridHeight": 32,
@@ -231,7 +231,7 @@
         "gridOffsetY": 0,
         "gridR": 158,
         "gridWidth": 32,
-        "snap": true,
+        "snap": false,
         "windowMask": false,
         "zoomFactor": 0.76
       },
@@ -367,6 +367,36 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": -90,
+          "customSize": true,
+          "height": 41,
+          "layer": "",
+          "locked": false,
+          "name": "floor",
+          "width": 346,
+          "x": 286,
+          "y": 197,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -90.2938,
+          "customSize": true,
+          "height": 40,
+          "layer": "",
+          "locked": false,
+          "name": "floor",
+          "width": 803,
+          "x": 421,
+          "y": 213,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -377,10 +407,6 @@
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [
-            {
-              "name": "MyBehavior",
-              "type": "player_behaviour::player_movement"
-            },
             {
               "name": "PlatformerObject",
               "type": "PlatformBehavior::PlatformerObjectBehavior",
@@ -917,10 +943,6 @@
       ],
       "behaviorsSharedData": [
         {
-          "name": "MyBehavior",
-          "type": "player_behaviour::player_movement"
-        },
-        {
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
         },
@@ -952,7 +974,7 @@
       "title": "",
       "v": 194,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridB": 255,
         "gridG": 180,
         "gridHeight": 32,
@@ -960,9 +982,9 @@
         "gridOffsetY": 0,
         "gridR": 158,
         "gridWidth": 32,
-        "snap": true,
+        "snap": false,
         "windowMask": false,
-        "zoomFactor": 0.82
+        "zoomFactor": 0.7
       },
       "objectsGroups": [],
       "variables": [
@@ -1010,8 +1032,8 @@
           "locked": false,
           "name": "floor",
           "width": 220,
-          "x": 150,
-          "y": 452,
+          "x": 160,
+          "y": 448,
           "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
@@ -1040,8 +1062,8 @@
           "locked": false,
           "name": "end_level",
           "width": 63,
-          "x": 696,
-          "y": 293,
+          "x": 704,
+          "y": 160,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -1055,8 +1077,8 @@
           "locked": false,
           "name": "coin",
           "width": 0,
-          "x": 242,
-          "y": 385,
+          "x": 512,
+          "y": 320,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -1090,8 +1112,8 @@
           "locked": false,
           "name": "coin",
           "width": 0,
-          "x": 532,
-          "y": 303,
+          "x": 736,
+          "y": 480,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
@@ -1108,6 +1130,21 @@
           "x": 32,
           "y": 32,
           "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": -90,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "locked": false,
+          "name": "floor",
+          "width": 576,
+          "x": 532,
+          "y": 258,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1710,7 +1747,7 @@
           "locked": false,
           "name": "new_game",
           "width": 0,
-          "x": 256,
+          "x": 250,
           "y": 256,
           "zOrder": 1,
           "numberProperties": [],
@@ -1725,7 +1762,7 @@
           "locked": false,
           "name": "load_game",
           "width": 0,
-          "x": 256,
+          "x": 252,
           "y": 256,
           "zOrder": 2,
           "numberProperties": [],
@@ -1740,9 +1777,39 @@
           "locked": false,
           "name": "you_win",
           "width": 0,
-          "x": 256,
-          "y": 64,
+          "x": 268,
+          "y": 91,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "only_right",
+          "width": 0,
+          "x": 96,
+          "y": 512,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "game_aim",
+          "width": 0,
+          "x": 61,
+          "y": 89,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1805,9 +1872,105 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "only_right",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "P.S. You Can Only Move Right And Jump",
+          "font": "orange juice 2.0.ttf",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "game_aim",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Collect All Four Coins",
+          "font": "orange juice 2.0.ttf",
+          "characterSize": 80,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "LireFichierExp"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"score\"",
+                "",
+                "score"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "LireFichierTxt"
+              },
+              "parameters": [
+                "\"game\"",
+                "\"level\"",
+                "",
+                "saved_level"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "Variable(score)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
           "disabled": false,
           "folded": false,
@@ -1967,44 +2130,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "LireFichierExp"
-                  },
-                  "parameters": [
-                    "\"game\"",
-                    "\"score\"",
-                    "",
-                    "score"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "score",
-                    "=",
-                    "Variable(score)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "LireFichierTxt"
-                  },
-                  "parameters": [
-                    "\"game\"",
-                    "\"level\"",
-                    "",
-                    "saved_level"
-                  ],
-                  "subInstructions": []
-                },
                 {
                   "type": {
                     "inverted": false,
@@ -2204,6 +2329,38 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "4"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "game_aim"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -2241,8 +2398,8 @@
           "conditions": [
             {
               "type": {
-                "inverted": true,
-                "value": "PlatformBehavior::IsMoving"
+                "inverted": false,
+                "value": "PlatformBehavior::IsJumping"
               },
               "parameters": [
                 "player",
@@ -2259,167 +2416,7 @@
               },
               "parameters": [
                 "player",
-                "\"idle\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "PlatformBehavior::IsMoving"
-              },
-              "parameters": [
-                "player",
-                "PlatformerObject"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SetAnimationName"
-              },
-              "parameters": [
-                "player",
-                "\"walk\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "Left"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "FlipX"
-              },
-              "parameters": [
-                "player",
-                "yes"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "PlatformBehavior::IsMoving"
-              },
-              "parameters": [
-                "player",
-                "PlatformerObject"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SetAnimationName"
-              },
-              "parameters": [
-                "player",
-                "\"walk\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "PlatformBehavior::IsMoving"
-              },
-              "parameters": [
-                "player",
-                "PlatformerObject"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "SetAnimationName"
-              },
-              "parameters": [
-                "player",
-                "\"idle\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "KeyPressed"
-              },
-              "parameters": [
-                "",
-                "Right"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "FlipX"
-              },
-              "parameters": [
-                "player",
-                ""
+                "\"jump\""
               ],
               "subInstructions": []
             }
@@ -2519,11 +2516,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PlatformBehavior::IsJumping"
+                "value": "KeyPressed"
               },
               "parameters": [
-                "player",
-                "PlatformerObject"
+                "",
+                "Left"
               ],
               "subInstructions": []
             }
@@ -2532,11 +2529,45 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SetAnimationName"
+                "value": "PlatformBehavior::IgnoreDefaultControls"
               },
               "parameters": [
                 "player",
-                "\"jump\""
+                "PlatformerObject",
+                "yes"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Right"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlatformBehavior::IgnoreDefaultControls"
+              },
+              "parameters": [
+                "player",
+                "PlatformerObject",
+                "no"
               ],
               "subInstructions": []
             }
