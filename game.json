@@ -369,15 +369,15 @@
           "initialVariables": []
         },
         {
-          "angle": -90,
+          "angle": -270,
           "customSize": true,
           "height": 41,
           "layer": "",
           "locked": false,
           "name": "floor",
           "width": 346,
-          "x": 286,
-          "y": 197,
+          "x": 323,
+          "y": 200,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],

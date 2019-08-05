@@ -369,15 +369,15 @@
           "initialVariables": []
         },
         {
-          "angle": -90,
+          "angle": -270,
           "customSize": true,
           "height": 41,
           "layer": "",
           "locked": false,
           "name": "floor",
           "width": 346,
-          "x": 286,
-          "y": 197,
+          "x": 323,
+          "y": 200,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
@@ -745,21 +745,6 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Player movement",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -805,41 +790,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Delete"
-              },
-              "parameters": [
-                "coin",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "score",
-                "+",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "EcrireFichierExp"
-              },
-              "parameters": [
-                "\"game\"",
-                "\"score\"",
-                "GlobalVariable(score)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "EcrireFichierTxt"
               },
               "parameters": [
@@ -850,7 +800,17 @@
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "collect_coin"
+            }
+          ]
         },
         {
           "disabled": false,
@@ -1492,21 +1452,6 @@
             "includeConfig": 0
           },
           "target": "remove_collected_coins"
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Player movement",
-          "comment2": ""
         },
         {
           "disabled": false,
